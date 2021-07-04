@@ -1,0 +1,26 @@
+{
+  "name": "cryptovis",
+  "version": "1.0.0",
+  "description": "express server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "author": "Felix Kan",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "google-news-scraper": "^1.0.6",
+    "react-scroll-to-top": "^1.0.5",
+    "react-toggle-dark-mode": "^1.0.4",
+    "react-twitter-widgets": "^1.10.0"
+  }
+}
